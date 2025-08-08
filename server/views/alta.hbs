@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rouge - Contacto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Galada&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/css/navbar.css">
+  <link rel="stylesheet" href="/css/alta.css">
+  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="icon" type="image/png" href="https://static-00.iconduck.com/assets.00/gem-icon-2048x1820-nw1vrj8g.png">
+</head>
+<body>
+  <nav>
+    <a href="/" id="logo">
+      <i class="fa-solid fa-gem"></i> Rouge
+    </a>
+    <input type="checkbox" id="hamburger">
+    <label for="hamburger">
+      <i class="fa-solid fa-bars" style="color: white;"></i>
+    </label>
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/nosotros">Nosotros</a></li>
+      <li><a href="/alta" class="active">Alta de Producto</a></li>
+      <li><a href="/contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <main class="contact-form">
+    <div class="container">
+      <div class="form">
+        <h3 class="heading">Alta de Producto</h3>
+        <p class="text">
+          Por favor completa este formulario para agregar nuevos artículos.
+        </p>
+        <form action="/submit" method="POST">
+          <div class="inputBox">
+            <input
+              type="text"
+              name="product_name"
+              class="product_name"
+              placeholder="Nombre del Artículo"
+            />
+          </div>
+          <div class="inputBox">
+            <textarea
+              name="product_description"
+              class="product_description"
+              placeholder="Descripción del Artículo"
+            ></textarea>
+          </div>
+          <div class="inputBox">
+            <input
+              type="number"
+              name="product_price"
+              class="product_price"
+              placeholder="Precio del Artículo"
+            />
+          </div>
+          <div class="inputBox">
+            <input
+              type="text"
+              name="product_image_url"
+              class="product_image_url"
+              placeholder="URL de la Imagen del Artículo"
+            />
+          </div>
+          <br>
+          <button class="btn">Agregar Artículo</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <ul class="social_icons">
+      <li>
+        <a href="#">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </li>
+    </ul>
+    <ul class="menu">
+      <li>
+        <a href="/">Inicio</a>
+      </li>
+      <li>
+        <a href="/nosotros">Nosotros</a>
+      </li>
+      <li>
+        <a href="/alta">Alta</a>
+      </li>
+      <li>
+        <a href="/contacto">Contacto</a>
+      </li>
+    </ul>
+    <p>
+      ©2025 Rouge | Todos los derechos reservados
+    </p>
+  </footer>
+
+  <script src="/javascript/alta.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
