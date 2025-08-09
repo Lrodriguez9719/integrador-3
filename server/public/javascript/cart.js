@@ -82,8 +82,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Checkout button
-  // Checkout button
 document.getElementById("checkout-btn").addEventListener("click", async () => {
+  console.log("cart: ", cart);
   if (cart.length > 0) {
     try {
       const response = await fetch("/api/carrito", {

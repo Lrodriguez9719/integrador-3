@@ -3,6 +3,7 @@ const express = require("express"); // framework para crear servidores
 const morgan = require("morgan"); // middleware para loguear las peticiones
 const hbs = require("hbs"); // motor de plantillas para renderizar html
 const path = require("path"); // librería para trabajar con rutas
+const cors = require('cors'); // middleware para habilitar CORS
 
 // Importamos las rutas
 const routes = require('./routes/pagesRouter'); // Importamos las rutas de las páginas
@@ -16,6 +17,7 @@ app.use(morgan("dev")); // loguea las peticiones en la consola
 app.use(express.json()); // parsea el body de las peticiones a json
 app.use(express.urlencoded({ extended: true })); // parsea el body de las peticiones a json
 app.use(express.static(path.join(__dirname, "public"))); // 2v
+app.use(cors()); // habilitamos CORS para todas las rutas
 
 // Configuramos el motor de plantillas
 app.set("view engine", "hbs"); // configuramos el motor de plantillas

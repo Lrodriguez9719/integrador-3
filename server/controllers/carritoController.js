@@ -41,27 +41,6 @@ const añadirProductosAlCarrito = async (req, res) => {
       message: "Error al añadir productos al carrito",
     });
   }
-
-  // try {
-  //   const nuevoProducto = { name: product_name, ID: product_id };
-  //   const carrito = await Carrito.findOneAndUpdate(
-  //     {},
-  //     { $push: { productos: nuevoProducto } },
-  //     { new: true, upsert: true }
-  //   );
-
-  //   res.status(200).json({
-  //     status: "success",
-  //     message: "Producto añadido al carrito correctamente",
-  //     data: carrito,
-  //   });
-  // } catch (error) {
-  //   console.error("Error al añadir el producto al carrito:", error);
-  //   return res.status(500).json({
-  //     status: "error",
-  //     message: "Error al añadir el producto al carrito",
-  //   });
-  // }
 }
 
 module.exports = {
