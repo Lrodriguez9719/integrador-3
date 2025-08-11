@@ -59,7 +59,20 @@ nav ul a:hover {
   border-bottom: 2px solid #ffffff;
 }
 
+.hamburger-btn {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
+  .hamburger-btn {
+    display: block;
+  }
+  
+  nav label,
+  input[type="checkbox"] {
+    display: none;
+  }
+
   nav label {
     display: block;
   }

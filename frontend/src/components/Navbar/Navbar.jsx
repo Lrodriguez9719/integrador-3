@@ -8,34 +8,42 @@ import './Navbar.css';
 const Navbar = ({ activeLink }) => {
   const { cart } = useCart();
   const [showModal, setShowModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Handler to close menu when a link is clicked
+  const handleLinkClick = () => setMenuOpen(false);
 
   return (
     <nav className="navbar">
-      <Link to="/" id="logo">
+      <Link to="/" id="logo" onClick={handleLinkClick}>
         <i className="fa-solid fa-gem"></i> Rouge
       </Link>
-      <input type="checkbox" id="hamburger" />
-      <label htmlFor="hamburger">
+      <button
+        className="hamburger-btn"
+        aria-label="Abrir menú"
+        onClick={() => setMenuOpen(!menuOpen)}
+        style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+      >
         <i className="fa-solid fa-bars" style={{ color: "white" }}></i>
-      </label>
-      <ul>
+      </button>
+      <ul style={menuOpen ? { left: 0 } : { left: '-100%' }}>
         <li>
-          <Link to="/" className={activeLink === "home" ? "active" : ""}>
+          <Link to="/" className={activeLink === "home" ? "active" : ""} onClick={handleLinkClick}>
             Inicio
           </Link>
         </li>
         <li>
-          <Link to="/nosotros" className={activeLink === "nosotros" ? "active" : ""}>
+          <Link to="/nosotros" className={activeLink === "nosotros" ? "active" : ""} onClick={handleLinkClick}>
             Nosotros
           </Link>
         </li>
         <li>
-          <Link to="/alta" className={activeLink === "alta" ? "active" : ""}>
+          <Link to="/alta" className={activeLink === "alta" ? "active" : ""} onClick={handleLinkClick}>
             Alta de Producto
           </Link>
         </li>
         <li>
-          <Link to="/contacto" className={activeLink === "contacto" ? "active" : ""}>
+          <Link to="/contacto" className={activeLink === "contacto" ? "active" : ""} onClick={handleLinkClick}>
             Contacto
           </Link>
         </li>
