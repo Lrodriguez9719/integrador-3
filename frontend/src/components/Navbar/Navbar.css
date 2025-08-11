@@ -77,7 +77,7 @@ nav ul a:hover {
     display: block;
   }
 
-  nav ul {
+  nav .navbar-list {
     font-size: 1.2em;
     position: absolute;
     left: -100%;
@@ -101,6 +101,10 @@ nav ul a:hover {
     background-color: #801f2c;
     color: white;
     opacity: 1;
+  }
+
+  nav ul.menu-open {
+    left: 0;
   }
 }
 

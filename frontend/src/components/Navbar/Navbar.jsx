@@ -26,7 +26,7 @@ const Navbar = ({ activeLink }) => {
       >
         <i className="fa-solid fa-bars" style={{ color: "white" }}></i>
       </button>
-      <ul style={menuOpen ? { left: 0 } : { left: '-100%' }}>
+      <ul className={menuOpen ? "navbar-list menu-open" : "navbar-list"}>
         <li>
           <Link to="/" className={activeLink === "home" ? "active" : ""} onClick={handleLinkClick}>
             Inicio
