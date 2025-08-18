@@ -3,5 +3,8 @@
 Instrucciones:
 
 1. En esta carpeta, en una terminal ejecutar `npm install`
+2. Crear un archivo .env (`touch .env`)
+3. Escribir estos datos en el .env:
+  > REACT_APP_SERVER_URL=http://localhost:8080
 2. Ejecutar el comando `npm run start`
 3. El cliente deberia inicializar correctamente y ejecutarse en una ventana en su navegador predeterminado en el puerto 3000
