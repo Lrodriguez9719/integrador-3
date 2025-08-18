@@ -1,8 +1,9 @@
 import axios from 'axios';
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 export const fetchProductos = async () => {
   try {
-    const response = await axios.get('http://localhost:8080/api/productos');
+    const response = await axios.get(`${SERVER_URL}/api/productos`);
     return response.data;
   } catch (error) {
     console.error('Error fetching productos:', error);
@@ -12,7 +13,7 @@ export const fetchProductos = async () => {
 
 export const uploadProducto = async (producto) => {
   try {
-    const response = await axios.post('http://localhost:8080/api/productos', producto);
+    const response = await axios.post(`${SERVER_URL}/api/productos`, producto);
     return response.data;
   } catch (error) {
     console.error('Error uploading producto:', error);
@@ -22,7 +23,7 @@ export const uploadProducto = async (producto) => {
 
 export const fetchProductoById = async (id) => {
   try {
-    const response = await axios.get(`http://localhost:8080/api/productos/${id}`);
+    const response = await axios.get(`${SERVER_URL}/api/productos/${id}`);
     return response.data;
   } catch (error) {
     console.error('Error fetching producto by ID:', error);
@@ -36,7 +37,7 @@ export const cartCheckout = async (productos) => {
       name: item.nombre,
       id: item._id,
     }));
-    const response = await axios.post('http://localhost:8080/api/carrito', { productos: cartProducts });
+    const response = await axios.post(`${SERVER_URL}/api/carrito`, { productos: cartProducts });
     return response.data;
   } catch (error) {
     console.error('Error during cart checkout:', error);
